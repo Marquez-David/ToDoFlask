@@ -1,13 +1,20 @@
 # ToDo list using Flask
+- [Description](#description)
+- [Setup](#setup)
 
-## How To Run
-1. Install `virtualenv`:
+## Description
+This is a to-do list (Todo) web application project developed with Flask. The application allows users to manage their to-do tasks in an efficient and user-friendly way.
+
+## Setup
+1. Clone the repository
+```
+git clone https://github.com/Marquez-David/ToDoFlask.git
+```
+
+2. Install & run the `virtualenv`:
 ```
 $ pip install virtualenv
-```
 
-2. Open a terminal in the project root directory and run:
-```
 $ virtualenv env
 ```
 
@@ -18,5 +25,5 @@ $ .\env\Scripts\activate
 
 4. Finally start the web server:
 ```
-$ (env) python app.py
+$ python app.py
 ```
