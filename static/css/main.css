@@ -21,7 +21,6 @@ table {
 th,
 td {
   border: 1px solid #ddd;
-  padding: 8px;
 }
 
 th {
@@ -39,19 +38,10 @@ a {
   text-align: center;
 }
 
-form {
-  margin-top: 20px;
-  /* Espaciado entre el formulario y otros elementos */
-}
-
-input[type="text"] {
-  padding: 10px;
-  margin: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  width: 200px;
-  /* Ajusta el ancho según tus necesidades */
+.title {
+  border: 0px;
+  width: 98%;
+  height: 50px;
 }
 
 input[type="submit"] {
