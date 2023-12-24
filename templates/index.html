@@ -7,25 +7,32 @@
   <h1>ToDo List using Flask</h1>
   <table>
     <tr>
+      <th>Completed</th>
       <th>Title</th>
       <th>Created</th>
       <th>Actions</th>
     </tr>
     {% for task in tasks%}
     <tr>
-      <td>{{ task.title }}</td>
-      <td>{{ task.created.day }}-{{ task.created.month }}-{{ task.created.year }}</td>
-      <td>
-        <a href="/delete/{{task.id}}">Delete</a>
-        <a href="">Update</a>
+      <form action="/update/{{task.id}}" method="POST">
+        <td>{{ task.completed }}</td>
+        <td><input type="text" name="task_title" id="task_title" class="title" value="{{ task.title }}"></td>
+        <td>{{ task.created.day }}-{{ task.created.month }}-{{ task.created.year }}</td>
+        <td>
+          <input class="update" type="submit" value="Update">
+      </form>
+      <form action="/delete/{{task.id}}" method="DELETE">
+        <input class="delete" type="submit" value="Delete">
+      </form>
       </td>
     </tr>
     {% endfor %}
     <tr>
       <form action="/" method="POST">
+        <td></td>
         <td><input type="text" name="title" id="title" class="title" placeholder="Describe your task..."></td>
         <td></td>
-        <td><input type="submit" value="Add Task"></td>
+        <td><input class="create" type="submit" value="Create"></td>
       </form>
     </tr>
   </table>
