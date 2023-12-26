@@ -15,11 +15,9 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-  /* Espaciado entre el título y la tabla */
 }
 
-th,
-td {
+.title-td {
   border: 1px solid #ddd;
 }
 
@@ -29,9 +27,7 @@ th {
 
 a {
   display: block;
-  /* Hace que los enlaces ocupen todo el ancho disponible */
   margin-bottom: 5px;
-  /* Espaciado entre los enlaces */
 }
 
 .form {
@@ -41,7 +37,11 @@ a {
 .title {
   border: 0px;
   width: 98%;
-  height: 50px;
+  height: 40px;
+}
+
+.title:focus {
+  outline: none;
 }
 
 input[type="submit"] {
